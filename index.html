@@ -70,6 +70,7 @@
         <!-- Page Header -->
         <header class="text-center mb-12">
             <h1 class="text-5xl md:text-6xl font-extrabold text-blue-800 mb-2 drop-shadow-md">Juego de Países</h1>
+            <p class="text-lg md:text-xl text-gray-600">Filtra, busca o selecciona un país al azar para tu juego familiar.</p>
             <p class="text-lg md:text-xl text-gray-600">Filtra, busca o selecciona un país al azar para jugar</p>
         </header>
 
@@ -102,6 +103,9 @@
 				<div class="flex flex-wrap items-center justify-between gap-4">
 					<!-- World Cup Filters as Buttons -->
 					<div class="flex-grow flex flex-wrap items-center gap-4">
+                        <button id="mundiales-btn" class="filter-button">
+                            ⚽
+                        </button>
 
                         <button id="ganador-btn" class="filter-button">
                             🏆
@@ -126,19 +130,21 @@
                     </button>					
                 </div>
             </div>
-            
+
             <!-- Flag Color Filters -->
             <div class="mt-4">
                 <div id="colores-container" class="flex flex-wrap gap-2">
+                <p class="font-bold text-gray-700 mb-2">Colores de Bandera: <!-- Color buttons will be generated here by JS-->
                 <p class="font-bold text-gray-700 mb-2">Bandera: <!-- Color buttons will be generated here by JS-->
                 </div></p>
             </div>
 
         </div>
-        
+
         <!-- Search Results Section -->
         <div id="results-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             <!-- Country cards will be rendered here -->
+            <p id="no-results" class="col-span-full text-center text-gray-500 font-semibold text-lg hidden">No se encontraron países,los filtros o la búsqueda seleccionados.</p>
             <p id="no-results" class="col-span-full text-center text-gray-500 font-semibold text-lg hidden">No se encontraron países para ésta búsqueda.</p>
         </div>
 
@@ -162,153 +168,154 @@ Afganistán,Asia,Sur,"Darí (persa), Pastún","Negro, rojo, verde, escudo nacion
 Albania,Europa,Sur,Albanés,"Rojo, negro, águila bicéfala",0/0/0
 Alemania,Europa,Central,Alemán,"Negro, rojo, dorado","4/8/20"
 Andorra,Europa,Sur,Catalán,"Azul, amarillo, rojo, escudo de armas",0/0/0
-Angola,África,Sur,Portugués,"Rojo, negro, amarillo, estrella, machete, rueda dentada",0/0/0
+Angola,África,Sur,Portugués,"Rojo, negro, estrella, amarillo, machete, rueda dentada",0/0/0
 Antigua y Barbuda,América,Central,Inglés,"Negro, azul, blanco, rojo, sol dorado",0/0/0
-Arabia Saudita,Asia,Oeste,Arabe,"Verde, blanco, shahada, espada",0/0/6
-Argelia,África,Norte,Arabe,"Verde, blanco, rojo, media luna, estrella",0/0/4
-Argentina,América,Sur,Español,"Celeste, blanco, amarillo, dorado, sol","3/6/18"
+Arabia Saudita,Asia,Oeste,Arabe,"Verde, Shahada, espada en blanco",0/0/6
+Argelia,África,Norte,Arabe,"Verde, blanco, media luna, estrella rojos",0/0/4
+Argentina,América,Sur,Español,"Celeste, blanco, celeste, sol dorado","3/6/18"
 Armenia,Asia,Oeste,Armenio,"Rojo, azul, naranja",0/0/0
 Australia,Oceanía,,Inglés,"Azul, Union Jack, estrella Commonwealth, Cruz del Sur",0/0/6
-Austria,Europa,Central,Alemán,"Rojo, blanco",0/0/7
-Azerbaiyán,Europa,Oeste,Azerí,"Azul, rojo, verde, blanco, estrella, media luna",0/0/0
+Austria,Europa,Central,Alemán,"Rojo, blanco, rojo",0/0/7
+Azerbaiyán,Europa,Oeste,Azerí,"Azul, rojo, verde, estrella, media luna en blanco",0/0/0
 Bahamas,América,Norte,Inglés,"Azul acuamarina, amarillo, negro",0/0/0
-Bangladés,Asia,Sur,Bengalí,"Verde, rojo, círculo",0/0/0
-Barbados,América,Central,Inglés,"Azul, amarillo, negro, tridente ",0/0/0
-Baréin,Asia,Oeste,Arabe,"Rojo, blanco",0/0/0
+Bangladés,Asia,Sur,Bengalí,"Verde, círculo rojo",0/0/0
+Barbados,América,Central,Inglés,"Azul, amarillo, azul, tridente negro",0/0/0
+Baréin,Asia,Oeste,Arabe,"Rojo, franja blanco dentada",0/0/0
 Bélgica,Europa,Oeste,"Neerlandés, Francés, Alemán","Negro, amarillo, rojo",0/0/14
-Belice,América,Central,Inglés,"Azul, rojos, escudo de armas",0/0/0
+Belice,América,Central,Inglés,"Azul, escudo de armas, bordes rojos",0/0/0
 Benín,África,Oeste,Francés,"Verde, amarillo, rojo",0/0/0
 Bielorrusia,Europa,Este,Bielorruso, ruso,"Rojo, verde, patrón ornamental",0/0/0
-Birmania (Myanmar),Asia,Sudeste,Birmano,"Amarillo, verde, rojo, blanco, estrella",0/0/0
+Birmania (Myanmar),Asia,Sudeste,Birmano,"Amarillo, verde, rojo, estrella blanco",0/0/0
 Bolivia,América,Sur,Español,"Rojo, amarillo, verde",0/0/3
-Bonaire,América,Central,"Neerlandés,Papiamento","Azul, amarillo, blanco, negro, rojo, estrella, rosa de los vientos, timón",0/0/0
-Bosnia Herzegovina,Europa,Sur,"Bosnio, Croata, Serbio","Azul, amarillo, blanco, estrellas, triángulo",0/0/3
-Botsuana,África,Sur,"Inglés, Setsuana","Celeste, negro, blanco",0/0/0
+Bonaire,América,Central,"Neerlandés,Papiamento","Azul, amarillo, blanco, negro, rojo, estrella, rosa de los vientos,timón",0/0/0
+Bosnia Herzegovina,Europa,Sur,"Bosnio, Croata, Serbio","Azul, triángulo amarillo, estrellas blancos",0/0/3
+Botsuana,África,Sur,Inglés, Setsuana,"Celeste, franja negra, blanco",0/0/0
 Brasil,América,Sur,Portugués,"Verde, amarillo, azul, blanco","5/7/22"
-Brunéi,Asia,Sudeste,Malayo,"Amarillo, blanco, negro, escudo de armas",0/0/0
+Brunéi,Asia,Sudeste,Malayo,"Amarillo, diagonales en blanco, negro, escudo de armas",0/0/0
 Bulgaria,Europa,Sur,Búlgaro,"Blanco, verde, rojo",0/0/7
-Burkina Faso,África,Oeste,Francés,"Rojo, verde, amarillo, estrella",0/0/0
-Burundi,África,Central,"Kirundi, Francés","Rojo, verde, blanco, estrellas",0/0/0
-Bután,Asia,Sur,Dzongkha,"Amarillo, naranja, blanco, dragón",0/0/0
-Cabo Verde,África,Oeste,Portugués,"Azul, blanco, rojo, estrellas",0/0/0
+Burkina Faso,África,Oeste,Francés,"Rojo, verde, estrella amarillo",0/0/0
+Burundi,África,Central,Kirundi, Francés,"Rojo, verde, blanco,estrellas rojos",0/0/0
+Bután,Asia,Sur,Dzongkha,"Amarillo, naranja, dragón blanco",0/0/0
+Cabo Verde,África,Oeste,Portugués,"Azul, blanco, rojo, círculo de estrellas",0/0/0
 Camboya,Asia,Sudeste,Jemer,"Azul, rojo, azul, templo de Angkor Wat",0/0/0
-Camerún,África,Central,"Francés,Inglés,""Verde, rojo, amarillo, dorada, estrella",0/0/8
-Canadá,América,Norte,"Inglés, Francés","Rojo, blanco, hoja de arce rojo",0/0/8
-Catar,Asia,Oeste,Arabe,"Granate, blanco",0/0/1
-Chad,África,Central,"Francés, Arabe","Azul, amarillo, rojo",0/0/0
-Chile,América,Sur,Español,"Rojo, blanco, azul, estrella",0/0/9
-China,Asia,Este,"Chino, Mandarín, ","Rojo, amarillo, estrellas",0/0/1
+Camerún,África,Central,Francés,Inglés,"Verde, rojo, amarillo, estrella dorada",0/0/8
+Canadá,América,Norte,Inglés, Francés,"Rojo, blanco, hoja de arce rojo",0/0/8
+Catar,Asia,Oeste,Arabe,"Granate, blanco, borde dentado",0/0/1
+Chad,África,Central,Francés, Arabe,"Azul, amarillo, rojo",0/0/0
+Chile,América,Sur,Español,"Rojo, blanco, azul, estrella blanco",0/0/9
+China,Asia,Este,"Chino, Mandarín, ","Rojo,cinco estrellas amarillos",0/0/1
 Chipre,Europa,Sur,"Griego, Turco","Blanco, silueta de la isla, ramas de olivo",0/0/0
 Colombia,América,Sur,Español,"Amarillo, azul, rojo",0/0/6
 Comoras,África,Sur,"Comorense, Francés, Arabe","Amarillo, blanco, rojo, azul, media luna, estrellas",0/0/0
-Corea del Norte,Asia,Este,Coreano,"Azul, rojo, blanco, estrella",0/0/2
-Corea del Sur,Asia,Este,Coreano,"Blanco, negro, yin-yang, trigramas",0/0/11
+Corea del Norte,Asia,Este,Coreano,"Azul, rojo, blanco, estrella rojo",0/0/2
+Corea del Sur,Asia,Este,Coreano,"Blanco, YinYang, trigramas negros",0/0/11
 Costa de Marfil,África,Oeste,Francés,"Naranja, blanco, verde",0/0/4
 Costa Rica,América,Central,Español,"Azul, blanco, rojo",0/0/6
 Croacia,Europa,Sur,Croata,"Rojo, blanco, azul, escudo de armas",0/1/6
-Cuba,América,Central,Español,"Rojo, blanco, azul, estrella",0/0/0
-Dinamarca,Europa,Norte,Danés,"Rojo, blanco, cruz",0/0/6
+Cuba,América,Central,Español,"Rojo, blanco, azul, estrella blanco",0/0/0
+Dinamarca,Europa,Norte,Danés,"Rojo, cruz blanco",0/0/6
 Dominica,América,Central,Inglés,"Verde, amarillo, negro, blanco, loro",0/0/0
 Ecuador,América,Sur,Español,"Amarillo, azul, rojo, escudo de armas",0/0/4
 Egipto,África,Norte,Arabe,"Rojo, blanco, negro, águila de Saladino",0/0/3
 El Salvador,América,Central,Español,"Azul, blanco, escudo de armas",0/0/4
 Emiratos Arabes Unidos,Asia,Oeste,Arabe,"Verde, blanco, negro, rojo",0/0/1
 Eritrea,África,Norte,"Tigriña, Arabe,Inglés","Rojo, verde, azul,ramas de olivo",0/0/0
-Escocia,Europa,Oeste,Inglés,"Azul, blanco, cruz",0/0/8
+Escocia,Europa,Oeste,Inglés,"Azul, cruz blanco",0/0/8
 Eslovaquia,Europa,Central,Eslovaco,"Blanco, azul, rojo, escudo de armas",0/0/1
 Eslovenia,Europa,Sur,Esloveno,"Blanco, azul, rojo, escudo de armas",0/0/2
 España,Europa,Sur,Español,"Rojo, amarillo, rojo, escudo de armas","1/1/16"
 Estados Unidos,América,Norte,Inglés,"Rojo, blanco, azul,estrellas",0/0/12
 Estonia,Europa,Norte,Estonio,"Azul, negro, blanco",0/0/0
 Etiopía,África,Norte,Amhárico,"Verde, amarillo, rojo, emblema nacional",0/0/0
-Filipinas,Asia,Sudeste,"Filipino, Inglés","Azul, rojo, blanco, sol, estrellas",0/0/0
-Finlandia,Europa,Norte,"Finés, sueco","Blanco, azul, cruz",0/0/0
-Fiyi,Oceanía,,"Inglés, fiyiano","Azul, Union Jack, escudo de armas",0/0/0
+Filipinas,Asia,Sudeste,Filipino,Inglés,"Azul, rojo, blanco, sol, estrellas",0/0/0
+Finlandia,Europa,Norte,Finés, sueco,"Blanco, azul, cruz",0/0/0
+Fiyi,Oceanía,,Inglés, fiyiano,"Azul, Union Jack, escudo de armas",0/0/0
 Francia,Europa,Oeste,Francés,"Azul, blanco, rojo","2/4/16"
 Gabón,África,Central,Francés,"Verde, amarillo, azul",0/0/0
-Gales,Europa,Oeste,"Inglés, galés","rojo, blanco, verde, dragón",0/0/2
+Gales,Europa,Oeste,Inglés, galés,"rojo, blanco, verde, dragón",0/0/2
 Gambia,África,Oeste,Inglés,"Rojo, azul, verde, blancos",0/0/0
-Georgia,Asia,Oeste,Georgiano,"Blanco, rojo, cruces",0/0/0
-Gibraltar,Europa,Sur,Inglés,"blanco, rojo, castillo, llave de oro",0/0/0
-Ghana,África,Oeste,Inglés,"Rojo, amarillo, verde, negro, estrella ",0/0/4
+Georgia,Asia,Oeste,Georgiano,"Blanco,cinco cruces rojos",0/0/0
+Gibraltar,Europa,Sur,Inglés,"blanco, castillo rojo, llave de oro",0/0/0
+Ghana,África,Oeste,Inglés,"Rojo, amarillo, verde, estrella negra",0/0/4
 Granada,América,Central,Inglés,"Rojo, amarillo, verde, estrella, nuez moscada",0/0/0
 Grecia,Europa,Sur,Griego,"Azul, blanco, cruz",0/0/4
 Guatemala,América,Central,Español,"Azul, blanco, escudo de armas",0/0/4
 Guinea,África,Oeste,Francés,"Rojo, amarillo, verde",0/0/0
-Guinea-Bissau,África,Oeste,Portugués,"Rojo, negro, amarillo, verde, negro, estrella",0/0/0
+Guinea-Bissau,África,Oeste,Portugués,"Rojo, negro, amarillo, verde, estrella negra",0/0/0
 Guinea Ecuatorial,África,Central,"Español, Francés, Portugués","Verde, blanco, rojo, escudo nacional",0/0/0
 Guyana,América,Sur,Inglés,"Verde, amarillo, blanco, rojo, negro",0/0/0
-Haití,América,Central,"Haitiano, Francés","Azul, rojo, escudo de armas",0/0/0
-Honduras,América,Central,Español,"Azul, blanco, estrellas",0/0/3
+Haití,América,Central,Haitiano, Francés,"Azul, rojo, escudo de armas",0/0/0
+Honduras,América,Central,Español,"Azul, blanco,cinco estrellas",0/0/3
 Hong Kong,Asia,Este,"Cantonés,Inglés","rojo, blanco, flor de bauhinia",0/0/0
 Hungría,Europa,Central,Húngaro,"Rojo, blanco, verde",0/2/9
-India,Asia,Sur,"Hindi,Inglés","Naranja, blanco, verde, azul, Chakra",0/0/0
+India,Asia,Sur,Hindi,Inglés,"Naranja, blanco, verde, azul, Chakra",0/0/0
 Indonesia,Asia,Sudeste,Indonesio,"Rojo, blanco",0/0/1
-Inglaterra,Europa,Oeste,Inglés,"blanco, rojo, cruz",1/1/16
-Irak,Asia,Oeste,"Arabe, kurdo","Rojo, blanco, negro, verde",0/0/8
+Inglaterra,Europa,Oeste,Inglés,"blanco, cruz rojo",1/1/16
+Irak,Asia,Oeste,Arabe, kurdo,"Rojo, blanco, negro, verde",0/0/8
 Irán,Asia,Oeste,Persa (Farsi),"Verde, blanco, rojo, emblema nacional",0/0/6
-Irlanda,Europa,Oeste,"Irlandés, Inglés","Verde, blanco, naranja",0/0/3
-Irlanda del Norte,Europa,Oeste,Inglés,"blanco, rojo, cruz, estrella, corona",0/0/3
-Islandia,Europa,Norte,Islandés,"Azul, rojo, cruz, blanco",0/0/1
-Islas Feroe,Europa,Norte,"Feroés,Danés","blanco, rojo, cruz, azul",0/0/0
-Israel,Asia,Oeste,"Hebreo, Arabe","Blanco, azul, Estrella de David",0/0/1
+Irlanda,Europa,Oeste,Irlandés,Inglés,"Verde, blanco, naranja",0/0/3
+Irlanda del Norte,Europa,Oeste,Inglés,"blanco, cruz rojo, estrella, corona",0/0/3
+Islandia,Europa,Norte,Islandés,"Azul, cruz rojo, blanco",0/0/1
+Islas Feroe,Europa,Norte,"Feroés,Danés","blanco, cruz rojo, azul",0/0/0
+Israel,Asia,Oeste,Hebreo, Arabe,"Blanco, azul, Estrella de David",0/0/1
 Italia,Europa,Sur,Italiano,"Verde, blanco, rojo","4/6/18"
 Jamaica,América,Central,Inglés,"Negro, verde, amarillo",0/0/0
-Japón,Asia,Este,Japonés,"Blanco, rojo, círculo",0/0/7
-Jordania,Asia,Oeste,Arabe,"Negro, blanco, verde, rojo, triángulo, estrella",0/0/0
-Kazajistán,Asia,Central,"Kazajo, ruso","Celeste, sol, águila, patrón ornamental",0/0/0
-Kenia,África,Este,"Suajili, Inglés","Negro, rojo, verde, escudo, lanzas",0/0/0
-Kirguistán,Asia,Central,"Kirguís, ruso","Rojo, sol, yurta estilizada",0/0/0
-Kiribati,Oceanía,,"Inglés, kiribatiano","Rojo, azul, blanco, sol",0/0/0
+Japón,Asia,Este,Japonés,"Blanco, círculo rojo",0/0/7
+Jordania,Asia,Oeste,Arabe,"Negro, blanco, verde, triángulo rojo, estrella blanco",0/0/0
+Kazajistán,Asia,Central,Kazajo, ruso,"Celeste, sol,águila,patrón ornamental",0/0/0
+Kenia,África,Este,Suajili,Inglés,"Negro, rojo, verde, escudo,lanzas",0/0/0
+Kirguistán,Asia,Central,Kirguís, ruso,"Rojo, sol, yurta estilizada",0/0/0
+Kiribati,Oceanía,,Inglés, kiribatiano,"Rojo, azul, blanco, sol, ",0/0/0
 Kuwait,Asia,Oeste,Arabe,"Verde, blanco, rojo, negro",0/0/1
-Laos,Asia,Sudeste,Laosiano,"Rojo, azul, blanco, círculo",0/0/0
-Lesoto,África,Sur,"Sesoto,Inglés","Azul, blanco, verde, sombrero tradicional",0/0/0
+Laos,Asia,Sudeste,Laosiano,"Rojo, azul, círculo blanco",0/0/0
+Lesoto,África,Sur,Sesoto,Inglés,"Azul, blanco, verde, sombrero tradicional",0/0/0
 Letonia,Europa,Norte,Letón,"Rojo, blanco",0/0/0
-Líbano,Asia,Oeste,Arabe,"Rojo, blanco, verde, cedro",0/0/0
-Liberia,África,Oeste,Inglés,"Rojo, blanco, azul, cuadrado, estrella",0/0/0
+Líbano,Asia,Oeste,Arabe,"Rojo, blanco, rojo, cedro verde",0/0/0
+Liberia,África,Oeste,Inglés,"Rojo, blanco, cuadrado azul, estrella blanco",0/0/0
 Libia,África,Norte,Arabe,"Rojo, negro, verde, media luna, estrella",0/0/0
-Liechtenstein,Europa,Central,Alemán,"Azul, rojo, dorado, corona",0/0/0
+Liechtenstein,Europa,Central,Alemán,"Azul, rojo, corona dorada",0/0/0
 Lituania,Europa,Norte,Lituano,"Amarillo, verde, rojo",0/0/0
 Luxemburgo,Europa,Oeste,"Luxemburgués, Francés, Alemán","Rojo, blanco, azul",0/0/1
-Macao,Asia,Este,"Cantonés, Portugués","Verde, blanco, flor de loto, puente, mar",0/0/0
-Macedonia del Norte,Europa,Sur,Macedonio,"Rojo, amarillo, sol",0/0/0
-Madagascar,África,Sur,"Malagasy, Francés","Blanco, rojo, verde",0/0/0
+Macao,Asia,Este,"Cantonés,Portugués","Verde, flor de loto blanco,puente, mar",0/0/0
+Macedonia del Norte,Europa,Sur,Macedonio,"Rojo, sol amarillo",0/0/0
+Madagascar,África,Sur,Malagasy, Francés,"Blanco, rojo, verde",0/0/0
 Malasia,Asia,Sudeste,Malayo,"Rojo, blanco, azul, amarillo, media luna, estrella",0/0/0
-Malaui,África,Sur,"Chichewa,Inglés","Negro, rojo, verde, sol",0/0/0
+Malaui,África,Sur,Chichewa,Inglés,"Negro, rojo, verde, sol",0/0/0
 Maldivas,Asia,Sur,Divehi,"Rojo, rectángulo verde, media luna blanco",0/0/0
 Malí,África,Oeste,Francés,"Verde, amarillo, rojo",0/0/0
 Malta,Europa,Sur,Maltés,Inglés,"Blanco, rojo",0/0/0
 Marruecos,África,Norte,Arabe, bereber,"Rojo, estrella verde",0/0/6
-Mauricio,África,Sur,"Inglés, Francés","Rojo, azul, amarillo, verde",0/0/0
+Mauricio,África,Sur,Inglés, Francés,"Rojo, azul, amarillo, verde",0/0/0
 Mauritania,África,Oeste,Arabe,"Verde, amarillo, estrella, media luna",0/0/0
 México,América,Norte,Español,"Verde, blanco, rojo, escudo nacional",0/0/18
-Micronesia,Oceanía,,Inglés,"Azul, blancos, estrellas",0/0/0
+Micronesia,Oceanía,,Inglés,"Azul,cuatro estrellas blancos",0/0/0
 Moldavia,Europa,Este,Rumano,"Azul, amarillo, rojo, escudo de armas",0/0/0
 Mónaco,Europa,Sur,Francés,"Rojo, blanco",0/0/0
 Mongolia,Asia,Este,Mongol,"Rojo, azul, rojo, Soyombo",0/0/0
-Montenegro,Europa,Sur,Montenegrino,"Rojo, dorado, escudo de armas",0/0/0
-Mozambique,África,Sur,Portugués,"Verde, negro, amarillo, libro, azada, rifle",0/0/0
-Namibia,África,Sur,Inglés,"Azul, rojo, verde, blanco, dorado, sol",0/0/0
-Nauru,Oceanía,,"Nauruano,Inglés","Azul, amarillo, estrella",0/0/0
+Montenegro,Europa,Sur,Montenegrino,"Rojo, borde dorado, escudo de armas",0/0/0
+Mozambique,África,Sur,Portugués,"Verde, negro, amarillo, libro, azada,rifle",0/0/0
+Namibia,África,Sur,Inglés,"Azul, rojo, verde, blancos,sol dorado",0/0/0
+Nauru,Oceanía,,Nauruano,Inglés,"Azul, estrella amarillo",0/0/0
 Nepal,Asia,Sur,Nepalí,"Rojo, azul, sol, luna",0/0/0
 Nicaragua,América,Central,Español,"Azul, blanco, escudo de armas",0/0/0
 Níger,África,Oeste,Francés,"Naranja, blanco, verde, círculo naranja",0/0/0
-Nigeria,África,Oeste,Inglés,"Verde, blanco",0/0/6
+Nigeria,África,Oeste,Inglés,"Verde, blanco, verde",0/0/6
 Noruega,Europa,Norte,Noruego,"Rojo, cruz azul, blanco",0/0/3
-Nueva Zelanda,Oceanía,,"Inglés, maorí","Azul, Union Jack, Cruz del Sur",0/0/6
+Nueva Zelanda,Oceanía,,Inglés, maorí,"Azul, Union Jack, Cruz del Sur",0/0/6
 Omán,Asia,Oeste,Arabe,"Blanco, rojo, verde, emblema nacional",0/0/0
 Países Bajos,Europa,Oeste,Neerlandés,"Rojo, blanco, azul",0/3/11
-Pakistán,Asia,Sur,"Urdú,Inglés","Verde, blanco, franja, media luna, estrella",0/0/0
-Palaos,Oceanía,,"Palaosiano, Inglés","Azul, amarillo, círculo",0/0/0
-Panamá,América,Central,Español,"Blanco, azul, rojo, estrellas",0/0/1
+Pakistán,Asia,Sur,Urdú,Inglés,"Verde, franja blanco, media luna, estrella",0/0/0
+Palaos,Oceanía,,Palaosiano,Inglés,"Azul, círculo amarillo",0/0/0
+Panamá,América,Central,Español,"Blanco, azul, rojo,estrellas",0/0/1
 Papúa Nueva Guinea,Oceanía,,"Tok pisin, Hiri motu, Inglés","Rojo, negro, ave del paraíso, Cruz del Sur",0/0/0
-Paraguay,América,Sur,"Español, guaraní","Rojo, blanco, azul, escudo nacional",0/0/8
+Paraguay,América,Sur,Español, guaraní,"Rojo, blanco, azul, escudo nacional",0/0/8
 Perú,América,Sur,Español,"Rojo, blanco",0/0/5
 Polonia,Europa,Central,Polaco,"Blanco, rojo",0/0/8
 Portugal,Europa,Sur,Portugués,"Rojo, verde, escudo de armas",0/0/8
-Puerto Rico,América,Central,"Español,Inglés","Rojo, blanco, azul, estrella",0/0/0
+Puerto Rico,América,Central,Español,Inglés,"Rojo, blanco, azul, estrella blanco",0/0/0
+Qatar,Asia,Oeste,Arabe,"Granate, blanco, borde dentado",0/0/1
 Reino Unido,Europa,Oeste,Inglés,"Azul, rojo, blanco","1/1/16"
-República Centroafricana,África,Central,"Francés, sango","Azul, blanco, verde, amarillo, estrella",0/0/0
+República Centroafricana,África,Central,Francés, sango,"Azul, blanco, verde, amarillo, estrella",0/0/0
 República Checa,Europa,Central,Checo,"Blanco, rojo, azul",0/2/9
 República Democrática del Congo,África,Central,Francés,"Azul, rojo, amarillo, estrella",0/0/0
 República Dominicana,América,Central,Español,"Azul, rojo, blanco, escudo de armas",0/0/0
@@ -317,49 +324,49 @@ Rumania,Europa,Este,Rumano,"Azul, amarillo, rojo",0/0/7
 Rusia,Europa,Oeste,Ruso,"Blanco, azul, rojo",0/0/11
 Ruanda,África,Central,"Kinyarwanda, Francés,Inglés","Azul, amarillo, verde, sol",0/0/0
 Saba,América,Central,"Neerlandés,Inglés","rojo, azul, blanco, verde, estrella de cinco puntas",0/0/0
-Samoa,Oceanía,,"Samoano,Inglés","Rojo, azul, blanco, cruz",0/0/0
-San Cristóbal y Nieves,América,Central,Inglés,"Verde, rojo, negro, amarillo, estrellas",0/0/0
+Samoa,Oceanía,,Samoano,Inglés,"Rojo, azul, cruz blanco",0/0/0
+San Cristóbal y Nieves,América,Central,Inglés,"Verde, rojo, negro, amarillos, estrellas",0/0/0
 San Eustaquio,América,Central,"Neerlandés,Inglés","Azul, amarillo, rojo, emblema",0/0/0
 San Marino,Europa,Sur,Italiano,"Blanco, azul, escudo de armas",0/0/0
-San Vicente y las Granadinas,América,Central,Inglés,"Azul, amarillo, verde, rombos",0/0/0
+San Vicente y las Granadinas,América,Central,Inglés,"Azul, amarillo, verde,rombos verdes",0/0/0
 Santa Lucía,América,Central,Inglés,"Azul, negro, blanco, amarillo, triángulo",0/0/0
-Santo Tomé y Príncipe,África,Central,Portugués,"Verde, amarillo, rojo, negro, estrellas",0/0/0
-Senegal,África,Oeste,Francés,"Verde, amarillo, rojo, verde, estrella",0/0/3
+Santo Tomé y Príncipe,África,Central,Portugués,"Verde, amarillo, rojo, estrellas negras",0/0/0
+Senegal,África,Oeste,Francés,"Verde, amarillo, rojo, estrella verde",0/0/3
 Serbia,Europa,Sur,Serbio,"Rojo, azul, blanco, escudo de armas",0/0/12
 Seychelles,África,Sur,"Criollo, Inglés, Francés","Rojo, amarillo, azul, verde, blanco",0/0/0
 Sierra Leona,África,Oeste,Inglés,"Verde, blanco, azul",0/0/0
 Singapur,Asia,Sudeste,"Malayo, Inglés, Chino, Tamil","Rojo, blanco, luna, estrellas",0/0/0
-Siria,Asia,Oeste,Arabe,"Rojo, blanco, negro, verde, estrellas",0/0/0
-Somalia,África,Norte,"Somalí, Arabe","Celeste, blanco, estrella",0/0/0
-Sri Lanka,Asia,Sur,"Cingalés, tamil","Amarillo, verde, naranja, rojo, león",0/0/0
+Siria,Asia,Oeste,Arabe,"Rojo, blanco, negro, estrellas verdes",0/0/0
+Somalia,África,Norte,Somalí, Arabe,"Celeste, estrella blanco",0/0/0
+Sri Lanka,Asia,Sur,Cingalés, tamil,"Amarillo, verde, naranja, rojo, león",0/0/0
 Sudáfrica,África,Sur,"Inglés, Zulú, Xhosa, Afrikáans, Sesoto sa laboa, Setsuana, Tsonga, Suazi, Venda, Sesoto, Lengua de señas sudafricana","Negro, amarillo, verde, blanco, rojo, azul",0/0/3
-Sudán,África,Norte,"Arabe,Inglés","Rojo, blanco, negro, verde, triángulo",0/0/0
-Sudán del Sur,África,Norte,Inglés,"Rojo, blanco, negro, verde, amarillo, estrella",0/0/0
-Suecia,Europa,Norte,Sueco,"Azul, amarillo, cruz",0/1/12
-Suiza,Europa,Central,"Alemán, Francés, Italiano, Romanche","Rojo, blanco, cruz",0/0/12
-Surinam,América,Sur,Neerlandés,"Verde, blanco, rojo, amarillo, estrella",0/0/0
-Suazilandia (Esuatini),África,Sur,"Suazi,Inglés","Azul, amarillo, rojo, escudo, lanzas",0/0/0
-Tailandia,Asia,Sudeste,Tailandés,"Rojo, blanco, azul, blanco",0/0/0
-Taiwán (China Taipei/República de China),Asia,Este,Mandarín,"Rojo, blanco, azul, sol",0/0/0
-Tanzania,África,Este,"Suajili,Inglés","Verde, azul, negro, amarillo",0/0/0
-Tayikistán,Asia,Central,"Tayiko, ruso","Rojo, blanco, verde, dorado, corona",0/0/0
-Timor Oriental,Asia,Sudeste,"Portugués, tetun","Rojo, amarillo, negro, blanco, estrella",0/0/0
-Togo,África,Oeste,Francés,"Verde, amarillo, rojo, blanco, estrella",0/0/0
-Tonga,Oceanía,,"Tongano,Inglés","Rojo, blanco, cruz",0/0/0
-Trinidad y Tobago,América,Central,Inglés,"Rojo, negro, blanco",0/0/1
-Túnez,África,Norte,Arabe,"Rojo, blanco, media luna, estrella",0/0/6
-Turkmenistán,Asia,Central,"Turcomano, ruso","Verde, ornamento, media luna, estrellas",0/0/0
-Turquía,Asia,Oeste,Turco,"Rojo, blanco, media luna, estrella",0/0/2
-Tuvalu,Oceanía,,"Inglés, tuvaluano","Azul, celeste, amarillo, Union Jack, estrellas",0/0/0
+Sudán,África,Norte,Arabe,Inglés,"Rojo, blanco, negro, triángulo verde",0/0/0
+Sudán del Sur,África,Norte,Inglés,"Rojo, blanco, negro, verde, estrella amarillo",0/0/0
+Suecia,Europa,Norte,Sueco,"Azul, cruz amarillo",0/1/12
+Suiza,Europa,Central,"Alemán, Francés, Italiano, Romanche","Rojo, cruz blanco",0/0/12
+Surinam,América,Sur,Neerlandés,"Verde, blanco, rojo, estrella amarillo",0/0/0
+Suazilandia (Esuatini),África,Sur,Suazi,Inglés,"Azul, amarillo, rojo, escudo,nzas",0/0/0
+Tailandia,Asia,Sudeste,Tailandés,"Rojo, blanco, azul, blanco, rojo",0/0/0
+Taiwán (China Taipei/República de China),Asia,Este,Mandarín,"Rojo, sol blanco en un cuadrado azul",0/0/0
+Tanzania,África,Este,Suajili,Inglés,"Verde, azul, negro, amarillo",0/0/0
+Tayikistán,Asia,Central,Tayiko, ruso,"Rojo, blanco, verde, corona dorada",0/0/0
+Timor Oriental,Asia,Sudeste,Portugués, tetun,"Rojo, amarillo, negro, blanco, estrella",0/0/0
+Togo,África,Oeste,Francés,"Verde, amarillo, rojo, estrella blanco",0/0/0
+Tonga,Oceanía,,Tongano,Inglés,"Rojo, cruz blanco",0/0/0
+Trinidad y Tobago,América,Central,Inglés,"Rojo, franja negra, blanco",0/0/1
+Túnez,África,Norte,Arabe,"Rojo, círculo blanco, media luna, estrella",0/0/6
+Turkmenistán,Asia,Central,Turcomano, ruso,"Verde, ornamento, media luna, estrellas",0/0/0
+Turquía,Asia,Oeste,Turco,"Rojo, media luna, estrella blancos",0/0/2
+Tuvalu,Oceanía,,Inglés, tuvaluano,"Azul celeste, Union Jack, estrellas amarillos",0/0/0
 Ucrania,Europa,Este,Ucraniano,"Azul, amarillo",0/0/1
-Uganda,África,Este,"Inglés, suajili","Negro, amarillo, rojo, grulla",0/0/0
+Uganda,África,Este,Inglés, suajili,"Negro, amarillo, rojo, grulla",0/0/0
 Uruguay,América,Sur,Español,"Azul, blanco, sol","2/3/14"
 Uzbekistán,Asia,Central,Uzbeko,"Azul, blanco, verde, media luna, estrellas",0/0/0
-Vanuatu,Oceanía,,"Bislama, Inglés, Francés","Rojo, verde, negro, colmillo, hoja",0/0/0
-Venezuela,América,Sur,Español,"Amarillo, azul, rojo, estrellas",0/0/0
-Vietnam,Asia,Sudeste,Vietnamita,"Rojo, amarillo, estrella",0/0/0
+Vanuatu,Oceanía,,,"Bislama, Inglés, Francés","Rojo, verde, negro, colmillo, hoja",0/0/0
+Venezuela,América,Sur,Español,"Amarillo, azul, rojo,estrellas",0/0/0
+Vietnam,Asia,Sudeste,Vietnamita,"Rojo, estrella amarillo",0/0/0
 Yemen,Asia,Oeste,Arabe,"Rojo, blanco, negro",0/0/0
-Yibuti,África,Norte,"Arabe, Francés","Celeste, verde, blanco, rojo, estrella",0/0/0
+Yibuti,África,Norte,Arabe, Francés,"Celeste, verde, blanco, estrella rojo",0/0/0
 Zambia,África,Sur,Inglés,"Verde, rojo, negro, naranja, águila",0/0/0
 Zimbabue,África,Sur,"Chichewa, Chibarwe, Inglés, Kalanga, Koisán, Nambya, Ndau, Ndebele del norte, Shangani, Shona, Sesoto, Tsonga, Setsuana, Venda, Xhosa, Lengua de signos zimbabuense,","Verde, amarillo, rojo, negro, ave, estrella",0/0/0`;
 
@@ -442,14 +449,14 @@ Zimbabue,África,Sur,"Chichewa, Chibarwe, Inglés, Kalanga, Koisán, Nambya, Nda
                     const continentRegion = country.Continente + (country.Región ? ` - ${country.Región}` : '');
                     continentRegions.add(continentRegion);
                 }
-                
+
                 if (country.Idioma) {
                     country.Idioma.split(',').forEach(lang => {
                         const trimmedLang = lang.trim();
                         if (trimmedLang) languages.add(trimmedLang);
                     });
                 }
-                
+
                 if (country.Bandera) {
                     extractColors(country.Bandera).forEach(color => colors.add(color));
                 }
@@ -471,7 +478,7 @@ Zimbabue,África,Sur,"Chichewa, Chibarwe, Inglés, Kalanga, Koisán, Nambya, Nda
             sortedLanguages.forEach(l => {
                 idiomaSelect.innerHTML += `<option value="${l}">${l}</option>`;
             });
-            
+
             sortedColors.forEach(c => {
                 const button = document.createElement('div');
                 button.className = 'color-circle';
@@ -503,7 +510,7 @@ Zimbabue,África,Sur,"Chichewa, Chibarwe, Inglés, Kalanga, Koisán, Nambya, Nda
                 const hasWorldCupParticipation = parseInt(mundialesData[2]) > 0;
                 const wins = parseInt(mundialesData[0]);
                 const finals = parseInt(mundialesData[1]);
-                
+
                 const card = document.createElement('div');
                 card.className = 'card bg-white p-6 rounded-2xl shadow-md flex flex-col justify-between';
                 card.innerHTML = `
@@ -542,7 +549,7 @@ Zimbabue,África,Sur,"Chichewa, Chibarwe, Inglés, Kalanga, Koisán, Nambya, Nda
                 const matchesSearch = country.País.toLowerCase().includes(searchTerm);
                 const matchesContinente = !continentRegion || (country.Continente === continentRegion) || (country.Continente + (country.Región ? ` - ${country.Región}` : '')) === continentRegion;
                 const matchesIdioma = !idioma || country.Idioma.split(',').map(l => l.trim()).includes(idioma);
-                
+
                 // New logic: all selected colors must be present
                 const countryColors = extractColors(country.Bandera);
                 const matchesAllColors = selectedColors.length === 0 || selectedColors.every(color => countryColors.includes(color));
@@ -578,6 +585,7 @@ Zimbabue,África,Sur,"Chichewa, Chibarwe, Inglés, Kalanga, Koisán, Nambya, Nda
                 <p><span class="font-bold">Región:</span> ${country.Región || 'N/A'}</p>
                 <p><span class="font-bold">Idiomas:</span> ${country.Idioma || 'N/A'}</p>
                 <p><span class="font-bold">Bandera:</span> ${country.Bandera || 'N/A'}</p>
+                <p><span class="font-bold">Mundiales:</span> Ganados: ${mundialesData[0]} / Finales: ${mundialesData[1]} / Participaciones: ${mundialesData[2]}</p>
             `;
             modal.classList.add('modal-active');
         }
@@ -597,7 +605,7 @@ Zimbabue,África,Sur,"Chichewa, Chibarwe, Inglés, Kalanga, Koisán, Nambya, Nda
             continenteSelect.addEventListener('change', filterAndSearchCountries);
             idiomaSelect.addEventListener('change', filterAndSearchCountries);
             searchInput.addEventListener('input', filterAndSearchCountries);
-            
+
             // Event listeners for the new filter buttons
             mundialesBtn.addEventListener('click', () => {
                 mundialesBtn.classList.toggle('active');
@@ -611,7 +619,7 @@ Zimbabue,África,Sur,"Chichewa, Chibarwe, Inglés, Kalanga, Koisán, Nambya, Nda
                 finalistaBtn.classList.toggle('active');
                 filterAndSearchCountries();
             });
-            
+
             randomBtn.addEventListener('click', showRandomCountry);
             resetBtn.addEventListener('click', () => {
                 continenteSelect.value = '';
