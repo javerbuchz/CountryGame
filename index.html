@@ -129,7 +129,6 @@
             <!-- Flag Color Filters -->
             <div class="mt-4">
                 <div id="colores-container" class="flex flex-wrap gap-2">
-                <p class="font-bold text-gray-700 mb-2">Colores de Bandera: <!-- Color buttons will be generated here by JS-->
                 <p class="font-bold text-gray-700 mb-2">Bandera: <!-- Color buttons will be generated here by JS-->
                 </div></p>
             </div>
@@ -506,6 +505,9 @@ Zimbabue,África,Sur,"Chichewa, Chibarwe, Inglés, Kalanga, Koisán, Nambya, Nda
                 const finals = parseInt(mundialesData[1]);
 
                 const card = document.createElement('div');
+				
+				const locationText = country.Continente + (country.Región ? ` - ${country.Región}` : '');
+
                 card.className = 'card bg-white p-6 rounded-2xl shadow-md flex flex-col justify-between';
                 card.innerHTML = `
                     <div>
@@ -515,7 +517,7 @@ Zimbabue,África,Sur,"Chichewa, Chibarwe, Inglés, Kalanga, Koisán, Nambya, Nda
                             ${finals > 0 ? `<span class="bg-pink-400 text-pink-900 text-xs font-semibold px-2 py-1 rounded-full">🥈 ${finals}</span>` : ''}
                             ${hasWorldCupParticipation ? `<span class="bg-yellow-400 text-yellow-900 text-xs font-semibold px-2 py-1 rounded-full">⚽</span>` : ''}
                         </div>
-                        <p class="text-gray-600 mb-1"><span class="font-semibold">Continente:</span> ${country.Continente || 'N/A'}</p>
+                        <p class="text-gray-600 mb-1"><span class="font-semibold">Continente:</span> ${locationText || 'N/A'}</p>
                         <p class="text-gray-600 mb-1"><span class="font-semibold">Idioma:</span> ${country.Idioma || 'N/A'}</p>
                         <p class="text-gray-600 mb-4"><span class="font-semibold">Bandera:</span> ${country.Bandera || 'N/A'}</p>
                     </div>
