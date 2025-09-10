@@ -70,7 +70,7 @@
         <!-- Page Header -->
         <header class="text-center mb-12">
             <h1 class="text-5xl md:text-6xl font-extrabold text-blue-800 mb-2 drop-shadow-md">Juego de Países</h1>
-            <p class="text-lg md:text-xl text-gray-600">Filtra, busca o selecciona un país al azar para tu juego familiar.</p>
+            <p class="text-lg md:text-xl text-gray-600">Filtra, busca o selecciona un país al azar para jugar</p>
         </header>
 
         <!-- Filters and Actions Section -->
@@ -102,14 +102,15 @@
 				<div class="flex flex-wrap items-center justify-between gap-4">
 					<!-- World Cup Filters as Buttons -->
 					<div class="flex-grow flex flex-wrap items-center gap-4">
-                        <button id="mundiales-btn" class="filter-button">
-                            ⚽
-                        </button>
+
                         <button id="ganador-btn" class="filter-button">
                             🏆
                         </button>
                         <button id="finalista-btn" class="filter-button">
                             🥈
+                        </button>
+                        <button id="mundiales-btn" class="filter-button">
+                            ⚽
                         </button>
 					</div>
 				</div>
@@ -129,7 +130,7 @@
             <!-- Flag Color Filters -->
             <div class="mt-4">
                 <div id="colores-container" class="flex flex-wrap gap-2">
-                <p class="font-bold text-gray-700 mb-2">Colores de Bandera: <!-- Color buttons will be generated here by JS-->
+                <p class="font-bold text-gray-700 mb-2">Bandera: <!-- Color buttons will be generated here by JS-->
                 </div></p>
             </div>
 
@@ -138,7 +139,7 @@
         <!-- Search Results Section -->
         <div id="results-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             <!-- Country cards will be rendered here -->
-            <p id="no-results" class="col-span-full text-center text-gray-500 font-semibold text-lg hidden">No se encontraron países,los filtros o la búsqueda seleccionados.</p>
+            <p id="no-results" class="col-span-full text-center text-gray-500 font-semibold text-lg hidden">No se encontraron países para ésta búsqueda.</p>
         </div>
 
     </div>
@@ -578,7 +579,6 @@ Zimbabue,África,Sur,"Chichewa, Chibarwe, Inglés, Kalanga, Koisán, Nambya, Nda
                 <p><span class="font-bold">Región:</span> ${country.Región || 'N/A'}</p>
                 <p><span class="font-bold">Idiomas:</span> ${country.Idioma || 'N/A'}</p>
                 <p><span class="font-bold">Bandera:</span> ${country.Bandera || 'N/A'}</p>
-                <p><span class="font-bold">Mundiales:</span> Ganados: ${mundialesData[0]} / Finales: ${mundialesData[1]} / Participaciones: ${mundialesData[2]}</p>
             `;
             modal.classList.add('modal-active');
         }
