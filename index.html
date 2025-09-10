@@ -511,12 +511,11 @@ Zimbabue,África,Sur,"Chichewa, Chibarwe, Inglés, Kalanga, Koisán, Nambya, Nda
                 card.className = 'card bg-white p-6 rounded-2xl shadow-md flex flex-col justify-between';
                 card.innerHTML = `
                     <div>
-                        <h3 class="text-xl font-bold mb-2 text-blue-700">${country.País}</h3>
-                        <div class="flex flex-wrap gap-2 mb-2">
+                        <h3 class="text-xl font-bold mb-2 text-blue-700">${country.País} 
                             ${wins > 0 ? `<span class="bg-blue-400 text-blue-900 text-xs font-semibold px-2 py-1 rounded-full">🏆 ${wins}</span>` : ''}
                             ${finals > 0 ? `<span class="bg-pink-400 text-pink-900 text-xs font-semibold px-2 py-1 rounded-full">🥈 ${finals}</span>` : ''}
                             ${hasWorldCupParticipation ? `<span class="bg-yellow-400 text-yellow-900 text-xs font-semibold px-2 py-1 rounded-full">⚽</span>` : ''}
-                        </div>
+						</h3>
                         <p class="text-gray-600 mb-1"><span class="font-semibold">Continente:</span> ${locationText || 'N/A'}</p>
                         <p class="text-gray-600 mb-1"><span class="font-semibold">Idioma:</span> ${country.Idioma || 'N/A'}</p>
                         <p class="text-gray-600 mb-4"><span class="font-semibold">Bandera:</span> ${country.Bandera || 'N/A'}</p>
