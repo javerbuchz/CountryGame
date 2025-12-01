@@ -12,6 +12,75 @@
             font-family: 'Inter', sans-serif;
             background-color: #f3f4f6;
             color: #1f2937;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        body.dark-mode {
+            background-color: #1f2937;
+            color: #f3f4f6;
+        }
+        body.dark-mode .bg-gray-100 {
+            background-color: #111827;
+        }
+        body.dark-mode .bg-white {
+            background-color: #374151;
+        }
+        body.dark-mode .text-gray-700 {
+            color: #d1d5db;
+        }
+        body.dark-mode .text-gray-600 {
+            color: #9ca3af;
+        }
+        body.dark-mode .text-gray-500 {
+            color: #6b7280;
+        }
+        body.dark-mode .bg-gray-50 {
+            background-color: #1f2937;
+        }
+        body.dark-mode .border-gray-300 {
+            border-color: #4b5563;
+        }
+        body.dark-mode .filter-button {
+            background-color: #4b5563;
+            color: #f3f4f6;
+        }
+        body.dark-mode .filter-button:hover {
+            background-color: #6b7280;
+        }
+        body.dark-mode .card {
+            background-color: #374151;
+        }
+        body.dark-mode .card:hover {
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+        }
+        body.dark-mode .modal {
+            background-color: rgba(0, 0, 0, 0.85);
+        }
+        body.dark-mode .modal > div {
+            background-color: #374151;
+        }
+        .dark-mode-toggle {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            z-index: 100;
+            background-color: #e5e7eb;
+            border: none;
+            border-radius: 9999px;
+            padding: 0.5rem;
+            cursor: pointer;
+            font-size: 24px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .dark-mode-toggle:hover {
+            transform: scale(1.1);
+        }
+        body.dark-mode .dark-mode-toggle {
+            background-color: #4b5563;
         }
         .card {
             transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -92,12 +161,28 @@
 </head>
 <body class="bg-gray-100">
 
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle" class="dark-mode-toggle" title="Cambiar modo">
+        🌙
+    </button>
+
     <div class="container-main p-4 sm:p-8">
 
         <!-- Page Header -->
         <header class="text-center mb-12">
-            <h1 class="text-5xl md:text-6xl font-extrabold text-blue-800 mb-2 drop-shadow-md">Juego de Paises</h1>
-            <p class="text-lg md:text-xl text-gray-600">Filtra, busca o selecciona un pais al azar para jugar</p>
+            <h1 class="text-5xl md:text-6xl font-extrabold text-blue-800 mb-2 drop-shadow-md">🌍 Juego de Paises</h1>
+            <p class="text-lg md:text-xl text-gray-600">Explora, filtra y descubre países de todo el mundo</p>
+       <div className="mt-12 p-6 bg-card rounded-xl shadow-md text-left">
+       <br>   <h2 className="text-2xl font-bold mb-4 text-card-foreground">✨ Funcionalidades:</h2>
+          <ul className="space-y-2 text-muted-foreground">
+            <li>📌 Fija tu pais con la chincheta</li>
+            <li>🎲 Selecciona un país al azar o ✏️ escribí uno específico</li>
+            <li>🔍 Busca por continente, región, idioma o colores de bandera</li>
+			<li>🌈 Filtra por colores de la bandera o ⚽ participación en mundiales, 🏆 campeon o 🥈 subcampeon</li>
+          </ul>
+       <br> <p class="text-lg md:text-xl text-gray-600">🎮 A jugar!!</p>
+
+      </div>
         </header>
 
         <!-- Filters and Actions Section -->
@@ -665,6 +750,29 @@ Zimbabue,Africa,Sur,"Chichewa, Chibarwe, Ingles, Kalanga, Koisan, Nambya, Ndau, 
         function hideModal() {
             modal.classList.remove('modal-active');
         }
+
+        // Dark mode functionality
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+        
+        // Check for saved dark mode preference
+        const savedDarkMode = localStorage.getItem('darkMode');
+        if (savedDarkMode === 'enabled') {
+            body.classList.add('dark-mode');
+            darkModeToggle.textContent = '☀️';
+        }
+        
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                darkModeToggle.textContent = '☀️';
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                darkModeToggle.textContent = '🌙';
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
 
         // Initialize the application
         window.onload = () => {
